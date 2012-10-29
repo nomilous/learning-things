@@ -11,7 +11,11 @@
 
 * [RSpec](http://en.wikipedia.org/wiki/Test-driven_development) - because [Test Driven Development](http://en.wikipedia.org/wiki/Test-driven_development) is the new [Hyperspace](https://github.com/nomilous/we-rspec/tree/master/.metadata), only better.
 
-Bundler
-=======
+First
+-----
 
-...
+I'm running ruby1.9.3, [here's how](https://github.com/nomilous/learning-things/commit/8f3b71a55a5ccaaef670816e3b5db18b1866bc59)
+
+### Bundler
+
+Just added a 
