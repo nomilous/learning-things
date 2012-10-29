@@ -7,6 +7,10 @@
 * [Sprockets](https://github.com/sstephenson/sprockets) - because it has: "...a powerful preprocessor pipeline that allows you to write assets in languages like CoffeeScript..." 
 * [CoffeeScript](http://coffeescript.org/) - because it's beautiful
 
+...allmost forgot:
+
+* [RSpec](http://en.wikipedia.org/wiki/Test-driven_development) - because [Test Driven Development](http://en.wikipedia.org/wiki/Test-driven_development) is the new [Hyperspace](https://github.com/nomilous/we-rspec/tree/master/.metadata), only better.
+
 Bundler
 =======
 
