@@ -1,0 +1,21 @@
+#
+# The other gems that this app uses
+#
+# To use them:
+# 
+#  $ gem install bundler  # incase you don't have it
+# 
+#  $ bundle               # makes the devmode bundle 
+#                         #    and updates Gemfile.lock (dont touch)
+#                         # 
+
+source :gemcutter
+source "http://rubygems.org"
+
+group :development, :test do
+
+  gem 'rake'             # ruby's make
+  gem 'rspec'            # test framework
+  gem 'rspec-mocks'      # more test bits
+
+end
