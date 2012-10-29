@@ -18,4 +18,73 @@ I'm running ruby1.9.3, [here's how](https://github.com/nomilous/learning-things/
 
 ### Bundler
 
-Just added a 
+* Just added the Gemfile and put a note to usage in it. It's up there somewhere in the file viewer.
+
+### RSpec
+
+* RSpec tests your code. 
+* And RSpec is also code itself. 
+* But its code that is clever enough to put itself into your code. (approximately)
+* And then it waits there. (approximately)
+* Watching. (approximately)
+* To make sure that your code does what you told RSpec `it "should" do` 
+
+eg.
+
+<pre>  
+
+describe MyApp do
+
+    it 'should work' do
+        MyApp.works.should == true
+    end
+
+end
+
+</pre>
+
+### [Guard](https://github.com/guard/guard) is very very cool.
+
+* You can jump up and down in front of it and make faces, and everything, [and yet it remains resolute](http://en.wikipedia.org/wiki/File:Buckingham-palace-guard-11279634947G5ru.jpg)
+* At also has a bunch of plugins
+
+This [commit]() outlines everything necessary to make this ---
+
+<pre>
+
+          01/• guard
+00:10:20 - INFO - Guard uses TerminalTitle to send notifications.
+00:10:20 - INFO - Guard::RSpec is running
+[1] guard(main)> # hits enter to run all tests
+=> nil
+[2] guard(main)> or not
+SyntaxError: unexpected keyword_or, expecting $end
+or not
+  ^
+[2] guard(main)> 
+00:10:43 - INFO - Run all
+00:10:43 - INFO - Running all specs
+
+MyApp
+  should work (FAILED - 1)
+
+Failures:
+
+  1) MyApp should work
+     Failure/Error: MyApp.works.should == true
+       expected: true
+            got: false (using ==)
+     # ./spec/my_app_spec.rb:5:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00097 seconds
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/my_app_spec.rb:3 # MyApp should work
+
+[3] guard(main)> 
+
+</pre>
+
+--- work.

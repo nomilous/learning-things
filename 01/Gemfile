@@ -18,4 +18,12 @@ group :development, :test do
   gem 'rspec'            # test framework
   gem 'rspec-mocks'      # more test bits
 
+  gem 'guard'
+  gem 'rb-fsevent'       # necessary for guard to watch the fs
+  gem 'guard-rspec'      # teach guard to monitor your changes and run test aswhen
+
+                         # 
+                         # $ guard init rspec  # will build a default Guardfile
+                         #                     
+
 end
