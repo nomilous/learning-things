@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+#
+# - This sets the current ruby to 1.9.3
+#   upon cd into this directory
+#
+# - Except it doesn't,
+#  
+#   1. Because it needs to be renamed  to .rvmrc (which is gitignored)
+#   3. Because rvm (http://rvm.io) might not be installed and **Configured**
+#   2. Some people prefer rbenv(https://github.com/sstephenson/rbenv) (4 good reason)
+#   0. because 9 8 7 2, (4 no reason)
+#   
+
+environment_id="ruby-1.9.3-p194"
+
+if [[ -d "${rvm_path:-$HOME/.rvm}/environments"
+  && -s "${rvm_path:-$HOME/.rvm}/environments/$environment_id" ]]
+then
+  \. "${rvm_path:-$HOME/.rvm}/environments/$environment_id"
+  [[ -s "${rvm_path:-$HOME/.rvm}/hooks/after_use" ]] &&
+    \. "${rvm_path:-$HOME/.rvm}/hooks/after_use" || true
+  if [[ $- == *i* ]] # check for interactive shells
+  then echo "Using: $(tput setaf 2)$GEM_HOME$(tput sgr0)" # show the user the ruby and gemset they are using in green
+  else echo "Using: $GEM_HOME" # don't use colors in non-interactive shells
+  fi
+else
+  # If the environment file has not yet been created, use the RVM CLI to select.
+  rvm --create use  "$environment_id" || {
+    echo "Failed to create RVM environment '${environment_id}'."
+    return 1
+  }
+fi
