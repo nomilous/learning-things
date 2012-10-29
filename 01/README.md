@@ -11,8 +11,8 @@
 
 * [RSpec](http://en.wikipedia.org/wiki/Test-driven_development) - because [Test Driven Development](http://en.wikipedia.org/wiki/Test-driven_development) is the new [Hyperspace](https://github.com/nomilous/we-rspec/tree/master/.metadata), only better.
 
-First
------
+### First
+
 
 I'm running ruby1.9.3, [here's how](https://github.com/nomilous/learning-things/commit/8f3b71a55a5ccaaef670816e3b5db18b1866bc59)
 
@@ -48,22 +48,28 @@ end
 * You can jump up and down in front of it and make faces, and everything, [and yet it remains resolute](http://en.wikipedia.org/wiki/File:Buckingham-palace-guard-11279634947G5ru.jpg)
 * At also has a bunch of plugins
 
-This [commit]() outlines everything necessary to make this ---
+This [commit](https://github.com/nomilous/learning-things/commit/6fe5e409498021419dd2b2984279513a48797d00) outlines everything necessary to make the following: ---
+
+### The continuos running of tests
 
 <pre>
 
-          01/• guard
-00:10:20 - INFO - Guard uses TerminalTitle to send notifications.
-00:10:20 - INFO - Guard::RSpec is running
+$ guard
+00:13:14 - INFO - Guard uses TerminalTitle to send notifications.
+00:13:14 - INFO - Guard::RSpec is running
+
 [1] guard(main)> # hits enter to run all tests
 => nil
-[2] guard(main)> or not
-SyntaxError: unexpected keyword_or, expecting $end
-or not
-  ^
-[2] guard(main)> 
-00:10:43 - INFO - Run all
-00:10:43 - INFO - Running all specs
+
+[2] guard(main)> "or not..."
+=> "or not..."
+
+[3] guard(main)> "or not".length
+=> 6
+
+[4] guard(main)> 
+00:13:44 - INFO - Run all
+00:13:44 - INFO - Running all specs
 
 MyApp
   should work (FAILED - 1)
@@ -76,14 +82,14 @@ Failures:
             got: false (using ==)
      # ./spec/my_app_spec.rb:5:in `block (2 levels) in <top (required)>'
 
-Finished in 0.00097 seconds
+Finished in 0.00101 seconds
 1 example, 1 failure
 
 Failed examples:
 
 rspec ./spec/my_app_spec.rb:3 # MyApp should work
 
-[3] guard(main)> 
+[5] guard(main)> 
 
 </pre>
 
