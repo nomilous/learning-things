@@ -50,7 +50,7 @@ end
 
 This [commit](https://github.com/nomilous/learning-things/commit/6fe5e409498021419dd2b2984279513a48797d00) outlines everything necessary to make the following possible: ---
 
-### The continuos running of tests
+### The continuous running of tests
 
 <pre>
 
@@ -125,6 +125,25 @@ $ rackup config.ru
 And, with that, the app is running at [http://localhost:9292](http://localhost:9292)
 
 
+### Testing a webapp (serverside)
+
+* Add the sinatra-contrib gem, which included rack/test
+* Set up the spec/spec_helper to start the app up in test mode
+* This [commit](https://github.com/nomilous/learning-things/commit/5cbe6ac63041a4edc81d36592f1985cd9341983d) outlines all the changes to make the following test work
+
+<pre>
+describe 'MyApp' do
+
+  it 'should serve a webpage' do
+
+    get "/"
+    last_response.status.should eql 200
+    last_response.body.should == "A web page."
+
+  end
+  
+end
+</pre>
 
 
 
