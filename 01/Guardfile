@@ -2,7 +2,7 @@
 
 guard 'rspec',
 
-  :cli => "--color --format doc -r ./spec/rspec_config.rb",
+  :cli => "--color --format doc -r ./spec/rspec_config.rb -r ./spec/spec_helper",
   :all_on_start => false,
   :all_after_pass => false,
   :spec_paths => ['spec'] do

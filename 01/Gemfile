@@ -29,4 +29,6 @@ group :development, :test do
 end
 
 gem 'rack'
-gem 'sinatra'
+gem "sinatra"
+gem "sinatra-contrib"
+

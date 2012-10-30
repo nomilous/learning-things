@@ -12,6 +12,6 @@ $LOAD_PATH.unshift 'app'
 #
 RSpec.configure do |config|
 
-  config.before( :all ) { require './spec/spec_helper' }
+  
 
 end

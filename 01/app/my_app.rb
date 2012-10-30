@@ -13,7 +13,7 @@ class MyApp < Sinatra::Base
 
   get '/' do
 
-    'text gets sent to browser'
+    'A web page.'
 
   end
 
