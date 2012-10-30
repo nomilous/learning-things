@@ -46,7 +46,7 @@ end
 ### [Guard](https://github.com/guard/guard) is very very cool.
 
 * You can jump up and down in front of it and make faces, and everything, [and yet it remains resolute](http://en.wikipedia.org/wiki/File:Buckingham-palace-guard-11279634947G5ru.jpg)
-* At also has a bunch of plugins
+* It also has a bunch of plugins
 
 This [commit](https://github.com/nomilous/learning-things/commit/6fe5e409498021419dd2b2984279513a48797d00) outlines everything necessary to make the following: ---
 
@@ -90,6 +90,11 @@ Failed examples:
 rspec ./spec/my_app_spec.rb:3 # MyApp should work
 
 [5] guard(main)> 
+
+#
+# now its waiting for you to change a watched file
+# files are watched per the regex in the Guardfile
+#
 
 </pre>
 

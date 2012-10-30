@@ -1,25 +1,19 @@
-class MyApp
 
-  def self.works 
-    # 
-    # `self.` makes it a class method
-    # 
-    # so you dont need an instance
-    # 
-    # ie. (all this is not needed)
-    #  
-    #       instance = MyApp.new
-    #       instance.works
-    # 
-    # 
+#
+# To initialize the bundled dependancies
+#
+require 'rubygems'
+require 'bundler'
+Bundler.setup(:default, ENV['RACK_ENV'] || 'development')
+Bundler.require
 
-               
-    false        
-    #
-    # `return` is implied 
-    # 
-    # (becasue it's the last statement)
-    #
+
+
+class MyApp < Sinatra::Base
+
+  get '/' do
+
+    'text gets sent to browser'
 
   end
 
