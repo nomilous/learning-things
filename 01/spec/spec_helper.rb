@@ -7,6 +7,7 @@ require 'my_app'  # calls to app/my_app.rb
 
 ENV['RACK_ENV'] = 'test'
 require 'rack/test'
+require 'json'
 
 
 #
