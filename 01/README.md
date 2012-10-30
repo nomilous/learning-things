@@ -48,7 +48,7 @@ end
 * You can jump up and down in front of it and make faces, and everything, [and yet it remains resolute](http://en.wikipedia.org/wiki/File:Buckingham-palace-guard-11279634947G5ru.jpg)
 * It also has a bunch of plugins
 
-This [commit](https://github.com/nomilous/learning-things/commit/6fe5e409498021419dd2b2984279513a48797d00) outlines everything necessary to make the following: ---
+This [commit](https://github.com/nomilous/learning-things/commit/6fe5e409498021419dd2b2984279513a48797d00) outlines everything necessary to make the following possible: ---
 
 ### The continuos running of tests
 
@@ -98,4 +98,36 @@ rspec ./spec/my_app_spec.rb:3 # MyApp should work
 
 </pre>
 
---- work.
+
+### Rack and Sinatra
+
+This [commit](https://github.com/nomilous/learning-things/commit/ccc0630b82340c49e3f1dfd6da9bc9c381903add) shows all the changes necessary to get rack and sinatra to serve a we page.
+
+New gems were added to the Gemfile, so it was necessary to run bundle before starting the app, as follows:
+
+<pre>
+
+$ bundle
+Using rake (0.9.2.2) 
+Using coderay (1.0.8) 
+Using diff-lcs (1.1.3) 
+...
+Using bundler (1.2.1) 
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+$ rackup config.ru 
+[2012-10-30 20:49:38] INFO  WEBrick 1.3.1
+[2012-10-30 20:49:38] INFO  ruby 1.9.3 (2012-04-20) [x86_64-darwin11.3.0]
+[2012-10-30 20:49:38] INFO  WEBrick::HTTPServer#start: pid=2717 port=9292
+
+</pre>
+
+And the app is running at [http://localhost:9292](http://localhost:9292)
+
+
+
+
+
+
+
+
