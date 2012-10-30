@@ -146,6 +146,33 @@ end
 </pre>
 
 
+### A login controller
+
+* Added `app/controllers/login_controller.rb` to manage the serverside login functionality
+* Included the login_controller into `app/app_app.rb
+* This [commit](https://github.com/nomilous/learning-things/commit/b21376b37d27c5cb9e23c9be57806d177f6f84de) outlines all the changes for the login
+* All the while guard has been re-running tests with every change
+
+<pre>
+[1] guard(main)> 
+22:16:36 - INFO - Run all
+22:16:36 - INFO - Running all specs
+
+LoginController
+  authenticates a valid login
+  denies an invalid login
+
+MyApp
+  should serve a webpage
+
+Finished in 0.04353 seconds
+3 examples, 0 failures
+
+[1] guard(main)> 
+</pre>
+
+
+
 
 
 
