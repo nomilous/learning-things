@@ -101,7 +101,7 @@ rspec ./spec/my_app_spec.rb:3 # MyApp should work
 
 ### Rack and Sinatra
 
-This [commit](https://github.com/nomilous/learning-things/commit/ccc0630b82340c49e3f1dfd6da9bc9c381903add) shows all the changes necessary to get rack and sinatra to serve a we page.
+This [commit](https://github.com/nomilous/learning-things/commit/ccc0630b82340c49e3f1dfd6da9bc9c381903add) shows all the changes necessary to get rack and sinatra to serve a web page.
 
 New gems were added to the Gemfile, so it was necessary to run bundle before starting the app, as follows:
 
@@ -122,7 +122,7 @@ $ rackup config.ru
 
 </pre>
 
-And the app is running at [http://localhost:9292](http://localhost:9292)
+And, with that, the app is running at [http://localhost:9292](http://localhost:9292)
 
 
 
