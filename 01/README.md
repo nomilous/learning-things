@@ -172,6 +172,12 @@ Finished in 0.04353 seconds
 </pre>
 
 
+### Sprockets to provide assets to the browser
+
+* Gemfile now has spockets, sass, and coffeescript
+* Added app/assets with javascripts and stylesheets directories
+* Configured sprockets to precompile from the script manifests `applicaiton.js` and `application.css`
+* This [commit](https://github.com/nomilous/learning-things/commit/1fdf1660671ceae747b7a8a4e06329e10cfa64a3) outlines all the changes
 
 
 
