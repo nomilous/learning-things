@@ -14,7 +14,8 @@
 
 * [CoffeeScript](http://coffeescript.org/) - because it's beautiful
 * [namespace.coffee](https://github.com/CodeCatalyst/namespace.coffee) - for namespace<i>ness</i>
-* 
+* [Jasmine](http://pivotal.github.com/jasmine/) - for clientside tests
+
 
 And!
 

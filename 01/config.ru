@@ -38,3 +38,4 @@ run MyApp
 map '/assets' do
   run MyApp.settings.sprockets
 end
+
