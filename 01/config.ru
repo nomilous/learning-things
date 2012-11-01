@@ -28,3 +28,13 @@ require File.expand_path(File.dirname(__FILE__) + '/app/my_app')
 #
 
 run MyApp
+
+
+#
+# Add sprockets middleware to rack
+#
+
+
+map '/assets' do
+  run MyApp.settings.sprockets
+end

@@ -28,7 +28,14 @@ group :development, :test do
 
 end
 
+
+# server bits
 gem 'rack'
 gem "sinatra"
 gem "sinatra-contrib"
+
+# assets (javascript, stylesheets)
+gem 'sprockets'
+gem 'sass'
+gem 'coffee-script'
 
