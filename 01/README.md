@@ -190,6 +190,13 @@ Finished in 0.04353 seconds
 * This [commit](https://github.com/nomilous/learning-things/commit/1fdf1660671ceae747b7a8a4e06329e10cfa64a3) outlines all the changes
 
 
+### Jasmine and Angular-mocks for clientside tests
+
+* Gemfile now has rack and guard livereload.
+* Modified Guardfile to watch for changes in server and client code - browser reloads on change
+* Jasmine for clientdside tests at /tests
+* This [commit](https://github.com/nomilous/learning-things/commit/4d1a81dfd28cd2b5f29f84695e227f8bba9268e8)
+
 
 
 
