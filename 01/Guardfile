@@ -13,7 +13,13 @@ guard 'rspec',
 
 end
 
+guard 'livereload' do
 
+  watch(%r{app/assets/.+\.(js|coffee)})
+  watch(%r{app/controllers/.+\.(erb)})
+  watch(%r{app/views/.+\.(erb)})
+  watch(%r{spec/assets/.+\.(js|coffee)}) 
+end
 
 
 

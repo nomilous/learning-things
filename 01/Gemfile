@@ -24,7 +24,10 @@ group :development, :test do
 
                          # 
                          # $ guard init rspec  # will build a default Guardfile
-                         #                     
+                         #   
+
+  gem 'rack-livereload'  # browser reloads on code change
+  gem 'guard-livereload' #   
 
 end
 

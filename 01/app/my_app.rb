@@ -20,6 +20,12 @@ Dir["app/controllers/*.rb"].each {|file| require file }
 
 class MyApp < Sinatra::Base
 
+  configure :development, :test do
+    require 'rack-livereload'
+    use Rack::LiveReload
+    register Sinatra::Reloader
+  end
+
   #
   # config sprockets
   #
@@ -36,12 +42,31 @@ class MyApp < Sinatra::Base
     sprockets.append_path(File.join(root, assets_prefix, 'stylesheets'))
     sprockets.append_path(File.join(root, assets_prefix, 'javascripts'))
   end
-  
+
 
   get '/' do
     "A web page."
   end
 
   include LoginController
+
+
+  #
+  # run clientside tests from /tests
+  #
+
+  
+
+  configure :development, :test do
+
+    set :spec_root, File.expand_path('../spec', File.dirname(__FILE__))
+    sprockets.append_path(File.join(spec_root, assets_prefix, "javascripts"))
+
+    get '/tests' do
+      erb File.open(settings.spec_root + '/assets/javascripts/spec-runner.erb'
+       ).read 
+    end
+
+  end
 
 end

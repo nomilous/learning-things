@@ -14,6 +14,7 @@
 
 * [CoffeeScript](http://coffeescript.org/) - because it's beautiful
 * [namespace.coffee](https://github.com/CodeCatalyst/namespace.coffee) - for namespace<i>ness</i>
+* 
 
 And!
 
